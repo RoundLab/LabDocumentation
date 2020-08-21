@@ -108,17 +108,29 @@ Think and organize 'project-centric'. Likely, you already organize by projects t
 For example:
 
 **Project_Name**
+
   **Raw-OR-Input_Data**
+
     *link_to_FCS_files_on_server*
+
     README.md
+
   **Methods-OR-eNotebooks**
+
   **Analyses**
+
     **FlowCytometry_Analysis**
+
     **16S_Analysis**
+
     **Metagenomics_Analysis**
+
   **Code-OR-Scripts-OR-Jobs**
+
   **Manuscripts**
+
     **Version_1**
+
   README.md
 
 ## Code documentation
@@ -202,6 +214,6 @@ git clone YOUR_GITHUB_REPOSITORY_URL
 4. You can now add, commit and push other files as above.
 
 ## .gitignore template
-Here is a .gitignore template file: https://github.com/RoundLab/Docs/ExampleTemplate.gitignore(https://github.com/RoundLab/Docs/ExampleTemplate.gitignore)
+Here is a .gitignore template file: [https://github.com/RoundLab/Docs/ExampleTemplate.gitignore](https://github.com/RoundLab/Docs/ExampleTemplate.gitignore)
 
 # Statistics
