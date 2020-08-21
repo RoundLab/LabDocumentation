@@ -1,0 +1,9 @@
+# Logs generally are not useful
+*.log
+*.outerror
+
+# Mac OS creates these irritating files. Will be present if mounting CHPC files systems on your mac.
+.DS_Store
+._*
+.DS_Store?
+.Trashes
