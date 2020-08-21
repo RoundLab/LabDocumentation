@@ -107,31 +107,21 @@ Think and organize 'project-centric'. Likely, you already organize by projects t
 
 For example:
 
-**Project_Name**
-
-  **Raw-OR-Input_Data**
-
-    *link_to_FCS_files_on_server*
-
+```
+Project_Name
+  Raw-OR-Input_Data
+    link_to_FCS_files_on_server
     README.md
-
-  **Methods-OR-eNotebooks**
-
-  **Analyses**
-
-    **FlowCytometry_Analysis**
-
-    **16S_Analysis**
-
-    **Metagenomics_Analysis**
-
-  **Code-OR-Scripts-OR-Jobs**
-
-  **Manuscripts**
-
-    **Version_1**
-
+  Methods-OR-eNotebooks
+  Analyses
+    FlowCytometry_Analysis
+    16S_Analysis
+    Metagenomics_Analysis
+  Code-OR-Scripts-OR-Jobs
+  Manuscripts
+    Version_1
   README.md
+```
 
 ## Code documentation
 - Minimally, the code or scripts themselves (slurm or bash job scripts) should be provided within your project.
