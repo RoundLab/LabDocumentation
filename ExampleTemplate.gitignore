@@ -1,3 +1,5 @@
+.gitignore
+
 # Logs generally are not useful
 *.log
 *.outerror
