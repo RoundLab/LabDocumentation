@@ -27,7 +27,7 @@
 - Be considerate, try not to take more computational resources than you need for interactive sessions and don't leave long running sessions if you aren't actively using them.
 
 ## Starting an interactive shell session on Round Lab node
-1. Log on to notchpeak cluser with your method of choice. **One** of:
+1. Log on to notchpeak cluster with your method of choice. **One** of:
    1. Using "Terminal" on Mac: `ssh Your_uNID@notchpeak.chpc.utah.edu`
    2. Using a Terminal from OnDemand Portal from CHPC: [https://ondemand.chpc.utah.edu](https://ondemand.chpc.utah.edu). Go to "Clusters" -> ">_Notchpeak Shell Access"
    3. Using Fastx Web client: In browser navigate to: [https://notchpeak1.chpc.utah.edu:3443](https://notchpeak1.chpc.utah.edu:3443). Click "Launch Session" and choose any terminal or virtual desktop you prefer.
@@ -41,13 +41,13 @@ If you need the entire round node, you can change the partition value to `-p rou
 ## Starting interactive session on other partitions.
 We also have an allocation that allows us to use time on other clusters and partitions. See [CHPC's documentation for more info on parititions, nodes and clusters](https://www.chpc.utah.edu/documentation/guides/index.php). Here is an example of how to get an interactive session on notchpeak-shared partition, using the round account allocation.
 
-1. Log on to notchpeak cluser with your method of choice. **One** of:
+1. Log on to cluster of your choice (here shown for notchpeak) with your method of choice. Similar method can be used for other clusters, just replacing "notchpeak" with other cluster name (for example, kingspeak). Use **One** of:
    1. Using "Terminal" on Mac: `ssh Your_uNID@notchpeak.chpc.utah.edu`
    2. Using a Terminal from OnDemand Portal from CHPC: [https://ondemand.chpc.utah.edu](https://ondemand.chpc.utah.edu). Go to "Clusters" -> ">_Notchpeak Shell Access"
    3. Using Fastx Web client: In browser navigate to: [https://notchpeak1.chpc.utah.edu:3443](https://notchpeak1.chpc.utah.edu:3443). Click "Launch Session" and choose any terminal or virtual desktop you prefer.
 2. Use 'srun' command to obtain an interactive session, changing time and proceses (`-n`) as desired:
 ```bash
-srun -A round -p round-shared --time 4:00:00 -n 2 --pty /bin/bash -l
+srun -A round -p notchpeak-shared --time 4:00:00 -n 2 --pty /bin/bash -l
 ```
 
 ## Mounting CHPC drives in Mac OS
