@@ -9,3 +9,15 @@
 ._*
 .DS_Store?
 .Trashes
+
+# RStudio stuff
+.Rproj.user
+.Rproj
+.RData
+.Rhistory
+.Rapp.history
+*README.html
+*README_cache/
+
+# Temporary files
+*~
