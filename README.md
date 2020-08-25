@@ -52,7 +52,7 @@ srun -A round -p round-shared --time 4:00:00 -n 2 --pty /bin/bash -l
 
 ## Mounting CHPC drives in Mac OS
 - Note that mounting locations can change, so these paths may need to be updated in the future.
-- See CHPC guide for additional details: [https://www.chpc.utah.edu/documentation/data_services.php#Direct_mounts](https://www.chpc.utah.edu/documentation/data_services.php#Direct_mounts), including method for mounting on Windows
+- See CHPC guide for additional details: [https://www.chpc.utah.edu/documentation/data_services.php#Direct_mounts](https://www.chpc.utah.edu/documentation/data_services.php#Direct_mounts), including method for mounting on Windows.
 
 ### Your Home directory
 1. Log in to a terminal session on CHPC.
@@ -60,10 +60,10 @@ srun -A round -p round-shared --time 4:00:00 -n 2 --pty /bin/bash -l
 ```bash
 df | grep "Your_uNID"
 ```
-3. Copy the network drive name. For example for me I want: `cottonwood-vg4-0-lv1.chpc.utah.edu`
+3. Copy the network drive name. For example for me (and likely all Round lab now) I want: `cottonwood-vg4-0-lv1.chpc.utah.edu`
 4. On you Mac connect as you do for Round Lab server:
    1. Go -> Connect to server...
-5. Enter server with your uNID as: `smb://ad;uNID@NETWORK-DRIVE-NAME-COPIED-ABOVE/round/uNID`
+5. Enter server with your uNID as: `smb://ad;uNID@NETWORK-DRIVE-NAME-COPIED-ABOVE/round-home/uNID`
 
 ### Round-group shared drives
 1. On your mac connect as you do for Round Lab server:
