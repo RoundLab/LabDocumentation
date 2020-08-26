@@ -15,6 +15,7 @@
   - [Getting started with Git: Setup a new project repository and push EXISTING project to GitHub from the command-line.](#getting-started-with-git-setup-a-new-project-repository-and-push-existing-project-to-github-from-the-command-line)
   - [Getting started with Git: From an existing, non-empty GitHub repository](#getting-started-with-git-from-an-existing-non-empty-github-repository)
   - [.gitignore template](#gitignore-template)
+- [Using Google Backup and Sync to sync your local files to Google Drive storage](#using-google-backup-and-sync-to-sync-your-local-files-to-google-drive-storage)
 - [Statistics](#statistics)
 
 <!-- /TOC -->
@@ -205,5 +206,37 @@ git clone YOUR_GITHUB_REPOSITORY_URL
 
 ## .gitignore template
 Here is a .gitignore template file: [https://github.com/RoundLab/Docs/ExampleTemplate.gitignore](https://github.com/RoundLab/Docs/ExampleTemplate.gitignore)
+
+# Using Google Backup and Sync to sync your local files to Google Drive storage
+With your uNID you have unlimited storage on Google Drive. This can be used to sync your local desktop files to the cloud (Google Drive) and access and edit them anywhere using GSuite (Google Docs, Sheets, etc.)
+
+1. Install Google Backup and Sync
+  - Notably, we are using this as a sync solution to facilitate remote work. Backup of data is managed by Path-IT. Thus, it likely makes sense to not sync your entire desktop and definitely don't rely on this as a backup solution.
+  
+2. Sign in with University of Utah Google account.
+  - uNID@gcloud.utah.edu (works)
+  - 2 step verification required.
+
+3. (optional) If the app is stuck on account settings after sign-in, click on link at bottom "Having trouble, open in browser".
+
+4. On My iMac (or My PC) page choose settings for backing up and syncing. You probably should only sync some of your folders. 
+  - If you are only syncing some folders, Click "Choose Folders" and add them one-by-one, otherwise simply check box next to Documents and/or Desktop.
+  - Click "Change" next to "Backing up all files and folders". Add extensions for large files you don't need synced. For example, files which you'd only use on one computer (big sequence files, files associated with a program only available on one computer [eg. FlowJo]). Suggestions:
+    - Raw Sequence files: fastq, fq
+    - Compressed files and archives: gz, tar
+    - Raw flow cytometry files and FlowJo10 Workspaces: fcs, wsp
+
+5. (optional) Under "Google Drive" section on "My iMac" or "My PC" page, change settings to "Always remove both copies" or "Never Remove Both Copies". Else, you will be frequently interrupted when moving files around. You can always change this later, so may want to keep it as "Ask..." initially.
+
+6. **IMPORTANT**: On "Google Drive" page, you should almost certainly **UNCHECK** the "Sync My Drive to this computer" box. Your files selected in previous section will still sync, but things already on your GCloud Google Drive account will not sync down to your local computer. If you have been backing up to this account from CHPC, for example, you may have many very large files that will needlessly take up space on your desktop (possibly filling your drive and causing issues) AND, ultimately, on Path backup space.
+
+7. Find your files on Google Drive browser interface by logging into your google account on browser. Switch to GCloud account by clicking on your profile pic in top right (usually) and click "Add another account". You can then switch between them in browser. 
+  - Files synced from computer are found in a separate section on Google Drive named "Computers" and listed by your computer name. I.e., they are separate from "My Drive".
+  - Google Docs now natively opens and saves Microsoft documents. So you can work with Google docs to edit your .docx files, for example, and the files will still be saved as Microsoft documents (unless you explicitly right-click and "Open with.." -> "Google Docs"). 
+
+Observations on Google Backup & Sync:
+- It is extremely slow initially as it looks to index files.
+- Storage is unlimited, but number of uploads/downloads per day *were* (still are?) limited, so initial syncing could take days.
+- Default sharing for Google Drive hosted data is anyone in the University of Utah *with link* can **view**. Worth keeping in mind.
 
 # Statistics
