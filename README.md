@@ -1,5 +1,8 @@
 <!-- TOC -->
 
+- [High-throughput sequencing project guidelines](#high-throughput-sequencing-project-guidelines)
+  - [Submitting a project on Gnomex](#submitting-a-project-on-gnomex)
+  - [Raw sequence file backups](#raw-sequence-file-backups)
 - [CHPC Usage](#chpc-usage)
   - [General](#general)
   - [Starting an interactive shell session on Round Lab node](#starting-an-interactive-shell-session-on-round-lab-node)
@@ -19,6 +22,19 @@
 - [Statistics](#statistics)
 
 <!-- /TOC -->
+
+# High-throughput sequencing project guidelines
+## Submitting a project on Gnomex
+- Have your metadata (Animal ID, Genotype, housing, conditiones, etc.) for your experiment ready before you submit on Gnomex.
+  - We want metadata for the project documented at time of submission. Gnomex experimental details will remain on Gnomex and tie the sequence library prep method, sequences and metadata together.
+  - Prepare in spreadsheet program with each variable in its own column, and export as tab-separated value file. Then, upload to Gnomex during submission. Gnomex will allow you to match column headers as desired.
+  - Having the metadata at submission allows you to automatcialy tie metadata to individual sequenced libraries after project is done. Go to "Experimental Design" and click "Download Sample Sheet" button after sequencing is done. This now lists each sample you submitted by its sequence library ID (for example, 13567X10) which is the preferable naming scheme to maintain.
+  
+## Raw sequence file backups
+- Gnomex will remove your sequence files after a few months. It is NOT a long-term storage.
+- Two backup locations for raw sequence files are required. Sumbitter/Experimenter is required to check they are both present.
+  1. Seven-bridges. Files will be automatically transferred here from Gnomex after 6 months. User should make sure they are "archived" on 7-bridges though to reduce storage costs. If metadata was properly filled at submission, this is sufficient beacause it will be transferred along with files. If not, user needs to add a metadata file to 7-bridges as well.
+  2. Round lab Path-server. Directory = "illumina_lanes_archive". User must tranfer them here themselves. Include the metadata file in your directory. Only transfer compressed (usually gzip) files. 
 
 # CHPC Usage
 ## General
