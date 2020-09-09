@@ -138,6 +138,7 @@ Git is the program we use for version control. GitHub is the website repository 
 - Git has a GUI you can install on Mac or PC if you like.
 - CHPC's git documentation page provides more details: [https://www.chpc.utah.edu/documentation/software/git-scm.php](https://www.chpc.utah.edu/documentation/software/git-scm.php)
 - Help with git commands: `git help CommandName`
+- **A very good getting started with Git guide**: [http://rogerdudler.github.io/git-guide/](http://rogerdudler.github.io/git-guide/)
 
 ## Getting started with Git: Setup a new project repository and push EXISTING project to GitHub from the command-line.
 It is a bit simpler to start with an empty GitHub repository and then initialize it in your project's directory as is shown here. If you already have files in your GitHub repository online (for example, if you started one with a README.md), you need to first "clone" that to your project directory to make sure they match up. Follow the next section instead ("Getting started with Git: From an existing, non-empty GitHub repository") if this is the case.
@@ -240,3 +241,19 @@ Observations on Google Backup & Sync:
 - Default sharing for Google Drive hosted data is anyone in the University of Utah *with link* can **view**. Worth keeping in mind.
 
 # Statistics
+## General stats and graphing good reads:
+- [2020 paper on Superplots](https://rupress.org/jcb/article/219/6/e202001064/151717/SuperPlots-Communicating-reproducibility-and) for communicating replicated experiments in graphs. Also a nice bit of discussion on when to use SE versus SD on plots (hint: it depends on what you are trying to show!).
+- **Statistics for Biologists Nature Collection** (previously known as the "Points of Significance" article series): A wonderful, ongoing set of short articles on many subjects related to statistical analysis and graphing with special consideration for biologists (i.e. easier to understand) [https://www.nature.com/collections/qghhqm](https://www.nature.com/collections/qghhqm).
+- Ten common statistical mistakes: [2019 eLife article](https://elifesciences.org/articles/48175).
+- **Modern Statistics for Modern Biology**, by Susan Holmes and Wulfgang Huber: [http://web.stanford.edu/class/bios221/book/index.html](http://web.stanford.edu/class/bios221/book/index.html). Excellent resource with examples in R.
+- [Regression models by Brian Caffo](https://leanpub.com/regmods/read#leanpub-auto-preface). Book accompanying Coursera Data Science course with links to videos within.
+
+## Specific methods
+### Microbial community-specific methods
+- ANCOM for microbial community composion [explained by its author](http://mortonjt.blogspot.com/2016/06/ancom-explained.html)
+- [Forum post](https://forum.qiime2.org/t/alpha-and-beta-diversity-explanations-and-commands/2282) succinctly explaining alpha and beta-diversity metrics implemented in Qiime2.
+### Multidimensional reduction / ordination
+- Ordination with ecology examples specfically. [Excellent post by Michael Palmer](http://ordination.okstate.edu/overview.htm).
+
+
+
