@@ -195,6 +195,11 @@ git init
 ```bash
 git remote add origin YOUR_GITHUB_REPOSITORY_URL
 ```
+Usually not needed, but to make sure you are on the "main" branch of your project. While branches are useful, you may never need to use them and stay on main. Note if comparing to online searches or help docs that this used to be referred to as "master" instead of "main".
+```
+git branch -M main
+```
+
 10.  Now, add the files you want git to track. You are actually all setup at this stage if your project directory is still empty (you didn't create a .gitignore or README.md file, or have other files already in your directory).
 ```bash
 git add README.md .gitignore
