@@ -10,6 +10,7 @@
   - [Mounting CHPC drives in Mac OS](#mounting-chpc-drives-in-mac-os)
     - [Your Home directory](#your-home-directory)
     - [Round-group shared drives](#round-group-shared-drives)
+  - [Downloading raw sequence files from Gnomex to CHPC](#downloading-raw-sequence-files-from-gnomex-to-chpc)
   - [Using containers with Singularity](#using-containers-with-singularity)
 - [Reproducibility Notes / Best Practices](#reproducibility-notes--best-practices)
   - [Data Management / Organization](#data-management--organization)
@@ -88,6 +89,30 @@ df | grep "Your_uNID"
 2. Enter server name, as below, replacing your uNID:
    1. round-group1: `smb://ad;<uNID>@saltflats-vg6-3-lv1.chpc.utah.edu/round-group1`
    2. round-group2: `smb://ad;<uNID>@cottonwood-vg2-3-lv1.chpc.utah.edu/round-group2`
+
+## Downloading raw sequence files from Gnomex to CHPC
+For near-term storage raw sequences can be kept on round-group1 drive in:
+`/uufs/chpc.utah.edu/common/home/round-group1/raw_illumina_seq`. This space (not backed up) is useful to store seqs you are actively working with and should not be used as long term storage. 
+
+Space can become limited here often (especially with bigger NovaSeq files), so you may need to download directly to scratch space instead.
+
+Regardless of destination location, in order to donwload from Gnomex to CHPC:
+1. Click on your Experiment in Gnomex, then the "Files" tab. 
+2. Click "Download Files" button and a separate window pops up.
+3. Drag the files you want to download (the fastq files minimally) to the right. 
+  - Be patient, this can be a bit slow to populate if you have a lot of files.
+  - Recently there is a "manifest" file here which relates each lengthy file name in a column to the sample ID. This can be a handy starting template for many other analysis programs that require some type of similar manifest file for input.
+4. Click on the "FDT Command Line" button. This pops up a separate window with a shell command and some instructions. 
+5. Ignore the instructions and just copy the full command (not the one under "For a Windows system..").
+6. In your script or a shell (depending on if job submitted batch script or interactive) move to the location you want to download your files.
+7. Paste the copied command, then replace "./fdtCommandLine.jar" with a reference to the fdt.jar file on our shared space, located here: `/uufs/chpc.utah.edu/common/home/round-group1/bin_shared/fdt.jar`. 
+  - Note that uou can also just redownload the .jar file as instructed by Gnomex and refer to that new download.
+  - You can also point to a separate place to download your files by changing the path after the `-d` option. It is set to your current directory `./` by default.
+8. After entering the command, your files should be rapidly transferring to the location you specified. Make sure to include a metadata file there.
+
+  a. In Gnomex experiment still, click on "Experiment Design" tab.
+  b. Click "Download Sample Sheet", and upload this file to your gnomex metadata and/or raw files location.
+  c. This file can be your sample mapping file or metadata file as-is (if you entered all metadata at time of submission), but at the least serves as an excellent starting template for a metadata file.
 
 ## Using containers with Singularity
 Containers are cached after the first time you call them. They can take up a large amount of space and each user doesn't necessarily need to have a same copy of the same container. So, set your cache to a shared, writeable location on round-group1.
