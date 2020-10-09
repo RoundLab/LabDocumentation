@@ -12,7 +12,7 @@
     - [Round-group shared drives](#round-group-shared-drives)
   - [Downloading raw sequence files from Gnomex to CHPC](#downloading-raw-sequence-files-from-gnomex-to-chpc)
   - [Using containers with Singularity](#using-containers-with-singularity)
-- [Cheatsheats And Helpful Links](#cheatsheets-and-helpful-links)
+- [Cheatsheets And Helpful Links](#cheatsheets-and-helpful-links)
 - [Reproducibility Notes / Best Practices](#reproducibility-notes--best-practices)
   - [Data Management / Organization](#data-management--organization)
   - [Code documentation](#code-documentation)
@@ -130,14 +130,20 @@ export SINGULARITY_CACHEDIR=/uufs/chpc.utah.edu/common/home/round-group1/contain
 source ~/.bash_profile
 ```
 
-# Cheatsheats And Helpful Links
+# Cheatsheets And Helpful Links
 **bash**:
-[Level 1: common bash commands](https://scilifelab.github.io/courses/ngsintro/1902/files/Bash_cheat_sheet_level1.pdf)
-[Level 2: regex and variables in bash](https://scilifelab.github.io/courses/ngsintro/1902/files/Bash_cheat_sheet_level2.pdf)
-[String split & variable substituion in filename examples in metagenomics](http://www.metagenomics.wiki/tools/ubuntu-linux/shell-loop/string-split)
+
+
+- [Level 1: common bash commands](https://scilifelab.github.io/courses/ngsintro/1902/files/Bash_cheat_sheet_level1.pdf)
+
+- [Level 2: regex and variables in bash](https://scilifelab.github.io/courses/ngsintro/1902/files/Bash_cheat_sheet_level2.pdf)
+
+- [String split & variable substituion in filename examples in metagenomics](http://www.metagenomics.wiki/tools/ubuntu-linux/shell-loop/string-split)
 
 **R**
-[All the R cheatsheets you could hope for](https://rstudio.com/resources/cheatsheets/)
+
+All the R cheatsheets you could hope for on [RStudio page](https://rstudio.com/resources/cheatsheets/). Some specifics:
+
   - [Data transformation in dplyr (tidyverse)](https://github.com/rstudio/cheatsheets/blob/master/data-transformation.pdf)
   - [Regular expressions in R](https://github.com/rstudio/cheatsheets/raw/master/regex.pdf)
   - [Base R](http://github.com/rstudio/cheatsheets/raw/master/base-r.pdf)
