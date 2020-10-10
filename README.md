@@ -82,14 +82,14 @@ df | grep "Your_uNID"
 3. Copy the network drive name. For example for me (and likely all Round lab now) I want: `cottonwood-vg4-0-lv1.chpc.utah.edu`
 4. On you Mac connect as you do for Round Lab server:
    1. Go -> Connect to server...
-5. Enter server with your uNID as: `smb://ad;uNID@NETWORK-DRIVE-NAME-COPIED-ABOVE/round-home/uNID`
+5. Enter server with your uNID as: `smb://ad;<uNID>@samba.chpc.utah.edu/round-home/<uNID>`
 
 ### Round-group shared drives
 1. On your mac connect as you do for Round Lab server:
    1. Go -> Connect to server...
 2. Enter server name, as below, replacing your uNID:
-   1. round-group1: `smb://ad;<uNID>@saltflats-vg6-3-lv1.chpc.utah.edu/round-group1`
-   2. round-group2: `smb://ad;<uNID>@cottonwood-vg2-3-lv1.chpc.utah.edu/round-group2`
+   1. round-group1: `smb://ad;<uNID>@samba.chpc.utah.edu/round-group1`
+   2. round-group2: `smb://ad;<uNID>@samba.chpc.utah.edu/round-group2`
 
 ## Downloading raw sequence files from Gnomex to CHPC
 For near-term storage raw sequences can be kept on round-group1 drive in:
