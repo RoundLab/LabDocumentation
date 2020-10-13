@@ -114,6 +114,11 @@ Regardless of destination location, in order to donwload from Gnomex to CHPC:
   a. In Gnomex experiment still, click on "Experiment Design" tab.
   b. Click "Download Sample Sheet", and upload this file to your gnomex metadata and/or raw files location.
   c. This file can be your sample mapping file or metadata file as-is (if you entered all metadata at time of submission), but at the least serves as an excellent starting template for a metadata file.
+  
+9. After your files have downloaded, makes sure to set permissions so round-group users can read and write these (you can change as desired, but best to keep write permissions so that they can be managed/deleted if needed to free up space). Replace DIRECTORY_NAME with the directory within `raw_illumina_seq` where your files are:
+```bash
+chmod -R 775 DIRECTORY_NAME
+```
 
 ## Using containers with Singularity
 Containers are cached after the first time you call them. They can take up a large amount of space and each user doesn't necessarily need to have a same copy of the same container. So, set your cache to a shared, writeable location on round-group1.
