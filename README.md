@@ -82,7 +82,7 @@ df | grep "Your_uNID"
 3. Copy the network drive name. For example for me (and likely all Round lab now) I want: `cottonwood-vg4-0-lv1.chpc.utah.edu`
 4. On you Mac connect as you do for Round Lab server:
    1. Go -> Connect to server...
-5. Enter server with your uNID as: `smb://ad;<uNID>@samba.chpc.utah.edu/round-home/<uNID>`
+5. Enter server identified from step 3 (replace `cottonwood-vg4-0-lv1.chpc.utah.edu` if different) with your uNID AND "round-home" as: `smb://ad;<uNID>@cottonwood-vg4-0-lv1.chpc.utah.edu/round-home/<uNID>`
 
 ### Round-group shared drives
 1. On your mac connect as you do for Round Lab server:
