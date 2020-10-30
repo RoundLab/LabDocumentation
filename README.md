@@ -12,6 +12,7 @@
     - [Round-group shared drives](#round-group-shared-drives)
   - [Downloading raw sequence files from Gnomex to CHPC](#downloading-raw-sequence-files-from-gnomex-to-chpc)
   - [Using containers with Singularity](#using-containers-with-singularity)
+  - [Display largest files in your home directory](#display-largest-files-in-your-home-directory)
 - [Cheatsheets And Helpful Links](#cheatsheets-and-helpful-links)
 - [Reproducibility Notes / Best Practices](#reproducibility-notes--best-practices)
   - [Data Management / Organization](#data-management--organization)
@@ -134,6 +135,14 @@ export SINGULARITY_CACHEDIR=/uufs/chpc.utah.edu/common/home/round-group1/contain
 ```bash
 source ~/.bash_profile
 ```
+
+## Display largest files in your home directory
+We only have 2 TB shared amongst all users' home spaces so it is important to try to avoid maintaining many large files in home space. To determine your top 100 largest files in human readable format:
+```bash
+cd ~
+du -shx ./ | sort -hr | head -n 100
+```
+This command can take some time to run depending on how many files you have in your home space.
 
 # Cheatsheets And Helpful Links
 **bash**:
