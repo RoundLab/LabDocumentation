@@ -137,10 +137,10 @@ source ~/.bash_profile
 ```
 
 ## Display largest files in your home directory
-We only have 2 TB shared amongst all users' home spaces so it is important to try to avoid maintaining many large files in home space. To determine your top 100 largest files in human readable format:
+We only have 2 TB shared amongst all users' home spaces so it is important to try to avoid maintaining many large files in home space. To determine your top 100 largest files (recursively from the current directory `./`) in human readable format:
 ```bash
 cd ~
-du -shx ./ | sort -hr | head -n 100
+du -hx ./ | sort -hr | head -n 100
 ```
 This command can take some time to run depending on how many files you have in your home space.
 
