@@ -3,6 +3,7 @@
 - [High-throughput sequencing project guidelines](#high-throughput-sequencing-project-guidelines)
   - [Submitting a project on Gnomex](#submitting-a-project-on-gnomex)
   - [Raw sequence file backups](#raw-sequence-file-backups)
+  - [MINIMUM metadata required for BioSample registration and NCBI SRA submissions](#minimum-metadata-required-for-biosample-registration-and-ncbi-sra-submissions)
 - [CHPC Usage](#chpc-usage)
   - [General](#general)
   - [Starting an interactive shell session on Round Lab node](#starting-an-interactive-shell-session-on-round-lab-node)
@@ -28,8 +29,9 @@
 
 # High-throughput sequencing project guidelines
 ## Submitting a project on Gnomex
-- Have your metadata (Animal ID, Genotype, housing, conditiones, etc.) for your experiment ready before you submit on Gnomex.
+- Have your metadata (Animal ID, Genotype, housing, conditions, etc.) for your experiment ready before you submit on Gnomex.
   - We want metadata for the project documented at time of submission. Gnomex experimental details will remain on Gnomex and tie the sequence library prep method, sequences and metadata together.
+  - See the minimum metadata requirements section below. These are **minimum to publish your data!** We should always exceed these requirements within our lab (depending on the sample type)
   - Prepare in spreadsheet program with each variable in its own column, and export as tab-separated value file. Then, upload to Gnomex during submission. Gnomex will allow you to match column headers as desired.
   - Having the metadata at submission allows you to automatcialy tie metadata to individual sequenced libraries after project is done. Go to "Experimental Design" and click "Download Sample Sheet" button after sequencing is done. This now lists each sample you submitted by its sequence library ID (for example, 13567X10) which is the preferable naming scheme to maintain.
   
@@ -38,6 +40,23 @@
 - Two backup locations for raw sequence files are required. Sumbitter/Experimenter is required to check they are both present.
   1. Seven-bridges. Files will be automatically transferred here from Gnomex after 6 months. User should make sure they are "archived" on 7-bridges though to reduce storage costs. If metadata was properly filled at submission, this is sufficient beacause it will be transferred along with files. If not, user needs to add a metadata file to 7-bridges as well.
   2. Round lab Path-server. Directory = "illumina_lanes_archive". User must tranfer them here themselves. Include the metadata file in your directory. Only transfer compressed (usually gzip) files. 
+
+## MINIMUM metadata required for BioSample registration and NCBI SRA submissions
+
+Sequences used in any publication are required to be deposited in a publicly available archive. NCBI's Sequence Read Archive (SRA) is the most common source, and generally it is required to deposit our publicly-funded research here, and certainly preferred. In order to do this, deposited sequences are connected to a "BioSample" which must be registered with some minimum metadata depending on the sample type. It is therefore critical that this metadata is recorded for all sequenced samples. Notably, the requirements are extremely minimal and we really want to surpass these to make publicly available data as useful to the scientific community as possible. The best idea is to follow the Genomic Standards Consortium guidelines and use their template spreadsheets ([https://gensc.org/mixs/](https://gensc.org/mixs/)).
+
+These requirements are continually changing, but as of February 2021: 
+
+**Model organisms**
+1. One of: Strain, isolate, breed, cultivar, ecotype
+2. One of: Age, Developmental Stage
+3. Sex
+4. Tissue
+
+*Note*: These are minimum from NCBI and the Genomic Standards Consortium has proposed minimum standards slightly more than this, and also a controlled vocabulary that makes deposited more useful to everyone. Also, they provide spreadsheets to help you fill in the information. It is highly recommended to use these standards [https://gensc.org/mixs/](https://gensc.org/mixs/) and will actually make it easier to upload to NCBI in the end.
+
+**Environmental, 16S, metagenomes, other**
+See the genomics standards consortium packages: [https://gensc.org/mixs/](https://gensc.org/mixs/)
 
 # CHPC Usage
 ## General
