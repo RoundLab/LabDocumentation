@@ -90,26 +90,22 @@ srun -A round -p notchpeak-shared --time 4:00:00 -n 2 --pty /bin/bash -l
 ```
 
 ## Mounting CHPC drives in Mac OS
+- Updated March 2021 for new samba mounting group space on CHPC
 - Note that mounting locations can change, so these paths may need to be updated in the future.
 - See CHPC guide for additional details: [https://www.chpc.utah.edu/documentation/data_services.php#Direct_mounts](https://www.chpc.utah.edu/documentation/data_services.php#Direct_mounts), including method for mounting on Windows.
 
 ### Your Home directory
-1. Log in to a terminal session on CHPC.
-2. Enter the following command to determine where your home is mounted (replacing with your uNID):
-```bash
-df | grep "Your_uNID"
-```
-3. Copy the network drive name. For example for me (and likely all Round lab now) I want: `cottonwood-vg4-0-lv1.chpc.utah.edu`
-4. On you Mac connect as you do for Round Lab server:
+
+1. On you Mac connect as you do for Round Lab server:
    1. Go -> Connect to server...
-5. Enter server identified from step 3 (replace `cottonwood-vg4-0-lv1.chpc.utah.edu` if different) with your uNID AND "round-home" as: `smb://ad;<uNID>@cottonwood-vg4-0-lv1.chpc.utah.edu/round-home/<uNID>`
+2. Enter server name with your (replacing uNID with your actual uNID): `smb://ad;uNID@samba.chpc.utah.edu/round-home/uNID`
 
 ### Round-group shared drives
 1. On your mac connect as you do for Round Lab server:
    1. Go -> Connect to server...
 2. Enter server name, as below, replacing your uNID:
-   1. round-group1: `smb://ad;<uNID>@samba.chpc.utah.edu/round-group1`
-   2. round-group2: `smb://ad;<uNID>@samba.chpc.utah.edu/round-group2`
+   1. round-group1: `smb://ad;uNID@samba.chpc.utah.edu/round-group1`
+   2. round-group2: `smb://ad;uNID@samba.chpc.utah.edu/round-group2`
 
 ## Downloading raw sequence files from Gnomex to CHPC
 For near-term storage raw sequences can be kept on round-group1 drive in:
