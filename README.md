@@ -104,12 +104,13 @@ srun -A round -p notchpeak-shared --time 4:00:00 -n 2 --pty /bin/bash -l
 1. On your mac connect as you do for Round Lab server:
    1. Go -> Connect to server...
 2. Enter server name, as below, replacing your uNID:
-   1. round-group1: `smb://ad;uNID@samba.chpc.utah.edu/round-group1`
-   2. round-group2: `smb://ad;uNID@samba.chpc.utah.edu/round-group2`
+   1. round-group3 (the drive formerly known as round-group1): `smb://ad;uNID@samba.chpc.utah.edu/round-group2`
+   2. round-group2 (General shared space): `smb://ad;uNID@samba.chpc.utah.edu/round-group3`
+   3. round-group4 (Reference seq datasets): `smb://ad;uNID@samba.chpc.utah.edu/round-group4`
 
 ## Downloading raw sequence files from Gnomex to CHPC
-For near-term storage raw sequences can be kept on round-group1 drive in:
-`/uufs/chpc.utah.edu/common/home/round-group1/raw_illumina_seq`. This space (not backed up) is useful to store seqs you are actively working with and should not be used as long term storage. 
+For near-term storage raw sequences can be kept on round-group3 drive in:
+`/uufs/chpc.utah.edu/common/home/round-group3/raw_illumina_seq`. This space (not backed up) is useful to store seqs you are actively working with and should not be used as long term storage. 
 
 Space can become limited here often (especially with bigger NovaSeq files), so you may need to download directly to scratch space instead.
 
